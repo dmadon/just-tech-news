@@ -1,0 +1,15 @@
+<div class="comments">
+    {{!-- WE ARE USING THE 'post.comments' ARRAY FOR THE OBJECT DATA IN THIS PARTIAL.
+    WE HAVE TO USE THE 'THIS' KEYWORD TO REFER TO AN ARRAY BECAUSE ARRAYS, UNLIKE OBJECTS, DON'T
+    HAVE NAMED PROPERTIES FOR US TO REFER TO (like 'vote_count' or 'username').  --}}
+    {{#each this}}
+    <section class="comment">
+        <div class="meta">
+            {{user.username}} on {{format_date created_at}}
+        </div>
+        <div class="text">
+            {{comment_text}}
+        </div>
+    </section>
+    {{/each}}
+</div>

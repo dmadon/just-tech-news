@@ -1,0 +1,10 @@
+<ol class="post-list">
+    {{#each posts as |post|}}
+    <li>
+        {{!-- TO USE A PARTIAL, ALL WE NEED IS THE > CHARACTER,
+        FOLLOWED BY THE NAME OF THE PARTIAL FILE
+        AND THE OBJECT WE'LL PASS TO THE PARTIAL --}}
+        {{>post-info post}}
+    </li>
+    {{/each}}
+</ol>
